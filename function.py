@@ -1,4 +1,4 @@
-def Token_Taker(passport_no, city, type):
+def Token_Taker(passport_no, city, type, password):
 
     from selenium import webdriver
 
@@ -13,7 +13,7 @@ def Token_Taker(passport_no, city, type):
     driver.find_element_by_id("btnPassportNext").click()
 
     #password
-    driver.find_element_by_name("lytA$ctl05$Password").send_keys("100")
+    driver.find_element_by_name("lytA$ctl05$Password").send_keys(password)
     driver.find_element_by_name("lytA$ctl05$LoginButton").click()
     
     #edit profile
@@ -61,9 +61,10 @@ def Token_Taker(passport_no, city, type):
                 condition = False
 
 
-passport = "08027730"
-city = 'Biratnagar'
+passport = "#########"
+city = '@@@@@@@@@'
 type = "online"
+password = "*******"
 
 Token_Taker(passport, city, type)
         
